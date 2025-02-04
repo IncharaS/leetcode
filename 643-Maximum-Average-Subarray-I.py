@@ -8,7 +8,7 @@ class Solution(object):
         n = len(nums)
         sum_window = sum(nums[:k])
         max_sum = sum_window
-        for i in range(len(nums)-k):
+        for i in range(n-k):
             sum_window -= nums[i]
             sum_window += nums[i+k]
             max_sum = max(max_sum, sum_window)
