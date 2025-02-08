@@ -5,15 +5,14 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        prefix_sum = 0
-        dictionary = {0:1}
+        sum_ = 0
+        dict_ = {0: 1}
         count = 0
         for i in nums:
-            prefix_sum += i
-            r = prefix_sum % k
-            if r < 0:
-                r += k
-            if r in dictionary:
-                count += dictionary[r]
-            dictionary[r] = 1 + dictionary.get(r, 0) 
+            sum_ += i
+            if sum_%k in dict_:
+                count += dict_[sum_%k]
+            dict_[sum_%k] = dict_.get(sum_%k, 0) + 1
         return count
+            
+            
