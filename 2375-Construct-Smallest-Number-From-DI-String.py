@@ -18,4 +18,7 @@ class Solution(object):
                     result += stack.pop()   
         return result
 
+        ## time complexity = stack push O(n), pop= O(n)
+        ## space complexity = stack O(n), string O(n)
+
         
