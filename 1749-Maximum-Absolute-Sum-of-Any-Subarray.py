@@ -12,8 +12,8 @@ class Solution(object):
             local_sum_positive = max(local_sum_positive + nums[i], nums[i])
             global_max_positive = max(global_max_positive, local_sum_positive)
 
-        local_sum_negative = 0
-        global_max_negative = 0
+        local_sum_negative = float('inf')
+        global_max_negative = float('inf')
         for i in range(len(nums)):
             local_sum_negative = min(local_sum_negative + nums[i], nums[i])
             global_max_negative = min(global_max_negative, local_sum_negative)
