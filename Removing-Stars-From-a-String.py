@@ -3,18 +3,14 @@ class Solution(object):
         """
         :type s: str
         :rtype: str
-        """
-        stack = []
-        i = 0
-        l = len(s)
-        while i < l:
-            while i < l and s[i] == '*':
-                stack.pop()
-                i += 1
-            if i < l and s[i] != '*':
-                stack.append(s[i])
-                i += 1
-        return ''.join(stack)
+"""
+        ans=[]
+        for i in s:
+            if i=='*':
+                ans.pop()
+            else:
+                ans+=[i]
+        return "".join(ans)
                 
 
 
