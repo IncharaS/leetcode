@@ -13,6 +13,7 @@ class Solution(object):
             if target < 0:
                 return
             for i in range(index, len(candidates)):
+                if candidates[i] > target: continue
                 path.append(candidates[i])
                 dfs(i, path, target - candidates[i])
                 path.pop()
