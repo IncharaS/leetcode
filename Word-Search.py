@@ -3,6 +3,8 @@ from typing import List
 
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
+
+        ## time com = 0(m*n*4^L), sc = O(l)
         row, col = len(board), len(board[0])
         visited = set()
 
