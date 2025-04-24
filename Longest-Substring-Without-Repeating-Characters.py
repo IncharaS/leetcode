@@ -28,17 +28,16 @@ class Solution:
         # return length
         i, j = 0, 0
         l = len(s)
-        char = set()
-        res = 0
-        if l == 0: return 0
-        while i < l and j < l:
-            while j < l and s[j] in char:
-                char.remove(s[i])
-                i += 1
-            while j < l and s[j] not in char:
-                char.add(s[j])
-                res = max(res, j - i + 1)
+        chars = set()
+        max_l = 0
+        while i < len(s) and j < len(s):
+            if s[j] not in chars:
+                chars.add(s[j])
+                max_l = max(max_l, j - i + 1)
                 j += 1
+            else:
+                while s[j] in chars:
+                    chars.remove(s[i])
+                    i += 1
+        return max_l
             
-            
-        return res 
