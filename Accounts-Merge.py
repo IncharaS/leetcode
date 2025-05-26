@@ -25,7 +25,7 @@ class Solution:
         for i in accounts:
             name = i[0]
             email = i[1:]
-            root_email = email[0]  # ✅ fix: not e[0]
+            root_email = email[0]  
             r_1 = find(root_email)
             for e in email[1:]:
                 r_2 = find(e)
