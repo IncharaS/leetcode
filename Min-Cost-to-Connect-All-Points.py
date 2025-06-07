@@ -5,7 +5,7 @@ class Solution:
         heapq.heapify(heap)
         visited = set()
         res = 0
-        while heap:
+        while heap and len(visited) < len(points):
             cost, index = heapq.heappop(heap)
             if index in visited:
                 continue
