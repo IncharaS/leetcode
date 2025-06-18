@@ -1,5 +1,7 @@
 class Solution:
     def validTree(self, n: int, edges: List[List[int]]) -> bool:
+        #no loops, no repeated edges
+        
         if len(edges) != n - 1: return False
         parent = {}
         for i in range(n):
